@@ -886,7 +886,7 @@ class Mission
 					rank="COLONEL";
 					skill=0.5;
 					text="stupov";
-					init="nul = [this] execVM ""removeitems.sqf"";radio_alpha_area attachTo [stupov, [0,0,0]];";
+					init="nul = [this] execVM ""removeItemsFromMan.sqf"";[this] execVM ""turnManIntoStupov.sqf"";";
 				};
 			};
 			class Waypoints
