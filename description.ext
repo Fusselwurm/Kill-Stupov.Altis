@@ -1,0 +1,72 @@
+respawn = "BASE";
+respawndelay = 4;
+onLoadMission = "Michail Stupov is the dangerous head of the enemy force and needs to be silenced.";
+onLoadName = "Eliminate Michail Stupov";
+author ="the incredible nomisum"
+loadScreen =  "loading.paa";
+
+class CfgIdentities
+{
+	class Stupov
+	{
+		name="Michail Stupov";
+        //nameSound = "Givens"; // ArmA3 only!
+		face="WhiteHead_15";
+		glasses="G_aviator";
+		speaker="Male05ENG";
+		pitch=1.1;
+	};
+};
+
+class CfgRadio
+{
+	sounds[] = {Welcome,Stupov_Dead,Rotary_Wing,Retreat_Immediately,Welcome_Back,Zulu_Available,Zulu_Scrambled,Zulu_Abort};
+	class Welcome
+	{
+		name = "Welcome";
+		sound[] = {"sound\welcome.ogg", db-50, 1.0};
+		title = "This is Papa Bear. Welcome to this mission guys. Your task is to infiltrate Sofia, locate and eliminate Michail Stupov, leader of the OPFOR force in this area to slow down enemy decision making. After successful neutralization you need to identify him, then hold position and wait for further instructions. Papa Bear out.";
+	};
+	class Stupov_Dead
+	{
+		name = "Stupov_Dead";
+		sound[] = {"sound\stupov_dead.ogg", db-50, 1.0};
+		title = "Stupov has been eliminated. Good job! Hold position and wait for further orders!";
+	};
+	class Rotary_Wing
+	{
+		name = "Rotary_Wing";
+		sound[] = {"sound\rotary_wing.ogg", db-50, 1.0};
+		title = "This is Papa Bear. Be advised, enemy rotary wing inbound. I repeat, enemy rotary wing inbound. Keep your heads down, air support is on its way. ETA 4 mike. Papa Bear out.";
+	};
+	class Retreat_Immediately
+	{
+		name = "Retreat_Immediately";
+		sound[] = {"sound\retreat_immediately.ogg", db-50, 1.0};
+		title = "This is Papa Bear. Enemy heavy armor platoon is reported heading your way. Get the fuck out of the town and retreat. Charlie and Delta will take over, they are going in full speed now. Good luck. Papa Bear out.";
+	};
+	class Welcome_Back
+	{
+		name = "Welcome_Back";
+		sound[] = {"sound\welcome_back.ogg", db-50, 1.0};
+		title = "Welcome back gentlemen. Sit down and enjoy a beer. For leaving the mission go to the toilet all together...";
+	};
+	class Zulu_Available
+	{
+		name = "Zulu_Available";
+		sound[] = {"sound\zulu_available.ogg", db-50, 1.0};
+		title = "This is Papa Bear. Air support is now available and on stand by. Callsign ZULU. Papa Bear out.";
+	};
+	class Zulu_Scrambled
+	{
+		name = "Zulu_Scrambled";
+		sound[] = {"sound\zulu_scrambled.ogg", db-50, 1.0};
+		title = "This is ZULU. Scrambled and ready to bust bandits arses. ZULU out.";
+	};
+	class Zulu_Abort
+	{
+		name = "Zulu_Abort";
+		sound[] = {"sound\zulu_abort.ogg", db-50, 1.0};
+		title = "This is ZULU. Getting spiked by enemy AA. Sorry, we need to pump and abort. ZULU out.";
+	};	
+};
